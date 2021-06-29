@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<environments default="oracle">
+		<environment id="oracle">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="oracle.jdbc.driver.OracleDriver" />
+<!-- 				<property name="url" value="jdbc:oracle:thin:@153.126.202.190:1521:XE" /> -->
+				<property name="url" value="jdbc:oracle:thin:@localhost:1521:orcl" />
+				<property name="username" value="housekeeper" />
+				<property name="password" value="oracle" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="OAccount241Mapper.xml" />
+		<mapper resource="OAccount461Mapper.xml" />
+		<mapper resource="OAccountconstMapper.xml" />
+		<mapper resource="OCreditMapper.xml" />
+		<mapper resource="OEntertainmentMapper.xml" />
+		<mapper resource="OFoodMapper.xml" />
+		<mapper resource="OGoodsMapper.xml" />
+		<mapper resource="OLiveMapper.xml" />
+		<mapper resource="OOtherMapper.xml" />
+		<mapper resource="OWasteMapper.xml" />
+		<mapper resource="MoneyMapper.xml" />
+	</mappers>
+</configuration>

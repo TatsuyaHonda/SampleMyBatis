@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<classPathEntry
+		location="C:\app\product\11.2.0\dbhome_1\jdbc\lib\ojdbc5.jar" />
+	<!-- location="/Program Files/IBM/SQLLIB/java/db2java.zip" /> -->
+
+	<context id="Oracle" targetRuntime="MyBatis3">
+		<jdbcConnection
+			driverClass="oracle.jdbc.driver.OracleDriver"
+			connectionURL="jdbc:oracle:thin:@localhost:1521:orcl"
+			userId="housekeeper" password="oracle">
+		</jdbcConnection>
+		<!-- <jdbcConnection -->
+		<!-- driverClass="oracle.jdbc.driver.OracleDriver" -->
+		<!-- connectionURL="jdbc:oracle:thin:@153.126.202.190:1521:XE" -->
+		<!-- userId="housekeeper" password="oracle"> -->
+		<!-- </jdbcConnection> -->
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator
+			targetPackage="house.keep.mybatis.model" targetProject="./">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator
+			targetPackage="house.keep.mybatis.xml" targetProject="./">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="house.keep.mybatis.dao" targetProject="./">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<!-- <table schema="HOUSEKEEPER" tableName="O_ACCOUNT241"></table> -->
+		<!-- <table schema="HOUSEKEEPER" tableName="O_ACCOUNT461"></table> -->
+		<!-- <table schema="HOUSEKEEPER" tableName="O_ACCOUNTCONST"></table> -->
+		<!-- <table schema="HOUSEKEEPER" tableName="O_CONSTANTS"></table> -->
+		<!-- <table schema="HOUSEKEEPER" tableName="O_CREDIT"></table> -->
+		<!-- <table schema="HOUSEKEEPER" tableName="O_ENTERTAINMENT"></table> -->
+		<!-- <table schema="HOUSEKEEPER" tableName="O_FOOD"></table> -->
+		<!-- <table schema="HOUSEKEEPER" tableName="O_GOODS"></table> -->
+		<!-- <table schema="HOUSEKEEPER" tableName="O_LIVE"></table> -->
+		<!-- <table schema="HOUSEKEEPER" tableName="O_OTHER"></table> -->
+		<!-- <table schema="HOUSEKEEPER" tableName="O_WASTE"></table> -->
+		<table schema="HOUSEKEEPER" tableName="MONEY"></table>
+
+	</context>
+</generatorConfiguration>
