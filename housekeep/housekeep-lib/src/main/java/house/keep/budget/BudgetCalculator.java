@@ -7,7 +7,7 @@ import house.keep.budget.model.BudgetRowModel;
 
 public interface BudgetCalculator {
 
-	// test edit
+	// test edit edit2
 	List<BudgetRowModel> calculate(Date targetMonthDate);
 
 }
