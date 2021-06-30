@@ -10,4 +10,7 @@ public interface BudgetCalculator {
 	// test edit edit2
 	List<BudgetRowModel> calculate(Date targetMonthDate);
 
+	//Sample Comment
+
+
 }
